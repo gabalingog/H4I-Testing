@@ -1,0 +1,282 @@
+[
+  {
+    "filename": "Public Garden, spring, flowering trees and swanboats.jpg",
+    "status": "pending_review",
+    "suggested_tags": {
+      "general_labels": [
+        "Tree",
+        "Recreation",
+        "Spring",
+        "Bank",
+        "Blossom",
+        "Lake",
+        "Park",
+        "Leisure",
+        "Twig",
+        "Pond",
+        "Garden",
+        "Cherry blossom",
+        "Vacation",
+        "Reflection",
+        "Canal"
+      ],
+      "objects": [],
+      "landmarks": [],
+      "park": "Boston Public Garden",
+      "season": "Spring"
+    },
+    "metadata": {
+      "capture_date": "2015-04-29T12:07:10",
+      "capture_date_is_estimated": false,
+      "copyright": "\u00a9 Caroline Phillips-Licari",
+      "gps": null
+    },
+    "raw_vision_response": {
+      "labels": [
+        {
+          "description": "Tree",
+          "score": 0.98
+        },
+        {
+          "description": "Recreation",
+          "score": 0.922
+        },
+        {
+          "description": "Spring",
+          "score": 0.912
+        },
+        {
+          "description": "Bank",
+          "score": 0.909
+        },
+        {
+          "description": "Blossom",
+          "score": 0.907
+        },
+        {
+          "description": "Lake",
+          "score": 0.842
+        },
+        {
+          "description": "Park",
+          "score": 0.838
+        },
+        {
+          "description": "Leisure",
+          "score": 0.819
+        },
+        {
+          "description": "Twig",
+          "score": 0.814
+        },
+        {
+          "description": "Pond",
+          "score": 0.806
+        },
+        {
+          "description": "Garden",
+          "score": 0.803
+        },
+        {
+          "description": "Cherry blossom",
+          "score": 0.736
+        },
+        {
+          "description": "Vacation",
+          "score": 0.65
+        },
+        {
+          "description": "Reflection",
+          "score": 0.645
+        },
+        {
+          "description": "Canal",
+          "score": 0.586
+        }
+      ],
+      "landmarks": [],
+      "objects": [],
+      "web_entities": [
+        {
+          "description": "Northern catalpa",
+          "score": 0.563
+        },
+        {
+          "description": "Boat",
+          "score": 0.436
+        },
+        {
+          "description": "Swan boat",
+          "score": 0.425
+        },
+        {
+          "description": "Cherry blossom",
+          "score": 0.386
+        },
+        {
+          "description": "Cherry",
+          "score": 0.261
+        },
+        {
+          "description": "Parking",
+          "score": 0.214
+        },
+        {
+          "description": "Catalpas",
+          "score": 0.083
+        }
+      ]
+    }
+  },
+  {
+    "filename": "Sally Cooper, bostonpublicgardenreflection.jpg",
+    "status": "error",
+    "error": "Bad image data."
+  },
+  {
+    "filename": "swan boat page, featured image-2.jpg",
+    "status": "error",
+    "error": "Bad image data."
+  },
+  {
+    "filename": "testimonial pic options-14.jpg",
+    "status": "pending_review",
+    "suggested_tags": {
+      "general_labels": [
+        "Statue",
+        "Sculpture",
+        "Fictional character",
+        "Wing",
+        "Angel",
+        "Mythical creature",
+        "Art",
+        "Monument",
+        "Supernatural creature",
+        "Classical sculpture",
+        "Memorial",
+        "Mythology",
+        "List of nonbuilding structure types",
+        "Artifact",
+        "Stone carving"
+      ],
+      "objects": [
+        "Bronze sculpture",
+        "Sculpture"
+      ],
+      "landmarks": [],
+      "park": null,
+      "season": "Summer"
+    },
+    "metadata": {
+      "capture_date": "2026-08-17T00:23:01.125160",
+      "capture_date_is_estimated": true,
+      "copyright": "\u00a9 Caroline Phillips-Licari",
+      "gps": null
+    },
+    "raw_vision_response": {
+      "labels": [
+        {
+          "description": "Statue",
+          "score": 0.987
+        },
+        {
+          "description": "Sculpture",
+          "score": 0.984
+        },
+        {
+          "description": "Fictional character",
+          "score": 0.963
+        },
+        {
+          "description": "Wing",
+          "score": 0.957
+        },
+        {
+          "description": "Angel",
+          "score": 0.951
+        },
+        {
+          "description": "Mythical creature",
+          "score": 0.936
+        },
+        {
+          "description": "Art",
+          "score": 0.919
+        },
+        {
+          "description": "Monument",
+          "score": 0.886
+        },
+        {
+          "description": "Supernatural creature",
+          "score": 0.867
+        },
+        {
+          "description": "Classical sculpture",
+          "score": 0.863
+        },
+        {
+          "description": "Memorial",
+          "score": 0.839
+        },
+        {
+          "description": "Mythology",
+          "score": 0.807
+        },
+        {
+          "description": "List of nonbuilding structure types",
+          "score": 0.789
+        },
+        {
+          "description": "Artifact",
+          "score": 0.734
+        },
+        {
+          "description": "Stone carving",
+          "score": 0.612
+        }
+      ],
+      "landmarks": [],
+      "objects": [
+        {
+          "name": "Bronze sculpture",
+          "score": 0.774
+        },
+        {
+          "name": "Sculpture",
+          "score": 0.623
+        }
+      ],
+      "web_entities": [
+        {
+          "description": "Statue",
+          "score": 0.582
+        },
+        {
+          "description": "Bronze sculpture",
+          "score": 0.528
+        },
+        {
+          "description": "Sculpture",
+          "score": 0.506
+        },
+        {
+          "description": "Classical sculpture",
+          "score": 0.474
+        },
+        {
+          "description": "Carving",
+          "score": 0.315
+        },
+        {
+          "description": "Classicism",
+          "score": 0.305
+        },
+        {
+          "description": "Bronze",
+          "score": 0.301
+        }
+      ]
+    }
+  }
+]
