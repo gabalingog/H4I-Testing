@@ -1,5 +1,5 @@
 """
-Photo tagging pipeline for the FPG Photo Library Portal (Phase 1 MVP).
+Photo tagging pipeline for the FPG Photo Library Portal (Phase 1 MVP)
 
 For each image in an input folder, this script:
   1. Reads embedded EXIF metadata (capture date, copyright, GPS if present)
@@ -9,17 +9,8 @@ For each image in an input folder, this script:
   4. Attempts to match the image to a known Boston park/landmark
   5. Writes one JSON record per photo into a "review queue" file
 
-IMPORTANT: This does NOT auto-publish tags. It produces suggestions for
-staff to confirm/edit/reject, matching Section 6.3 of the project spec
-(the AI tagging is a starting point, staff corrections are authoritative)
-and the explicit non-goal of unreviewed automatic tagging.
-
 Setup:
     pip install google-cloud-vision exifread
-
-Usage:
-    python3 tag_photos.py
-    (edit INPUT_DIR / OUTPUT_PATH below, or pass them as arguments)
 """
 
 import os
@@ -31,13 +22,10 @@ from datetime import datetime
 from google.cloud import vision
 import exifread
 
-
-# ---------------------------------------------------------------------------
-# Known Boston-area parks / landmarks this archive covers (spec Section 2).
+# CAN EDIT: for more specific results to help identify parks in Boston
 # Extend this as FPG confirms more landmark/statue names and the historic
-# Lightroom tag list becomes available (spec Section 9).
+# Lightroom tag list becomes available
 # Matched case-insensitively against Vision's landmark + web-entity results.
-# ---------------------------------------------------------------------------
 KNOWN_PARKS = {
     "Boston Public Garden": [
         "public garden", "swan boat", "george washington statue",

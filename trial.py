@@ -1,3 +1,6 @@
+# This is a basic object detection that runs in the terminal
+# Use this to check if the API is working on your end to not rack up API credits
+
 from google.cloud import vision
 
 client = vision.ImageAnnotatorClient()
