@@ -10,17 +10,25 @@ For each image in an input folder, this script:
   5. Writes one JSON record per photo into a "review queue" file
 
 Setup:
-    pip install google-cloud-vision exifread
+    pip install google-cloud-vision exifread Pillow
 """
 
 import os
 import sys
+import io
 import json
 import glob
 from datetime import datetime
 
 from google.cloud import vision
+from PIL import Image
 import exifread
+
+# Vision's LANDMARK_DETECTION feature fails with "Bad image data" on very
+# large images (seen on 6000x5928 / 3314x5122 source photos) even though
+# LABEL_DETECTION/OBJECT_LOCALIZATION/WEB_DETECTION handle them fine.
+# Downscaling before sending avoids this and shrinks the request payload.
+MAX_DIMENSION = 2000
 
 # CAN EDIT: for more specific results to help identify parks in Boston
 # Extend this as FPG confirms more landmark/statue names and the historic
@@ -129,9 +137,22 @@ def match_park_by_text(candidate_strings):
     return None
 
 
+def load_image_content(path: str) -> bytes:
+    """Read image bytes, downscaling large photos so all Vision features
+    (notably LANDMARK_DETECTION) can process them."""
+    img = Image.open(path)
+    if max(img.size) <= MAX_DIMENSION:
+        with open(path, "rb") as f:
+            return f.read()
+
+    img.thumbnail((MAX_DIMENSION, MAX_DIMENSION))
+    buf = io.BytesIO()
+    img.convert("RGB").save(buf, format="JPEG", quality=90)
+    return buf.getvalue()
+
+
 def analyze_image(client: vision.ImageAnnotatorClient, path: str) -> dict:
-    with open(path, "rb") as f:
-        content = f.read()
+    content = load_image_content(path)
     image = vision.Image(content=content)
 
     # Multiple features in one request. Vision bills per feature type used,

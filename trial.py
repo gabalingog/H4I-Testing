@@ -5,7 +5,7 @@ from google.cloud import vision
 
 client = vision.ImageAnnotatorClient()
 
-with open("test-photo-2.jpg", "rb") as f:
+with open("photos/Public Garden, spring, flowering trees and swanboats.jpg", "rb") as f:
     content = f.read()
 
 image = vision.Image(content=content)
